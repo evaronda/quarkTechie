@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quark Techie</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #000;
+      background-color: #f9f9f9;
+      min-height: 100vh;
+      position: relative;
+      padding-top: 80px;
+    }
+
+    .background-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      height: 500px;
+      background-image: url('imagenes/logo.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: blur(8px); 
+      z-index: -1; 
+      transform: translate(-50%, -50%);
+    }
+
+    header {
+        background: #000;
+        padding: 18px 40px;
+        margin-top: 10px;  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 25px; 
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        position: fixed; 
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%; 
+        z-index: 10;
+    }
+
+
+    .logo-img {
+      height: 50px; 
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.2);
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+    .hero h1 span {
+      color: #4f7f7f;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 30px 0 15px;
+    }
+
+    .hero em {
+      color: #555;
+      font-style: italic;
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      margin-top: 10px;
+      padding: 12px 25px;
+      background: #00c67c;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    footer p.legal {
+      font-size: 24px;
+      font-weight: bold;
+      color: #888;
+      margin-bottom: 15px;
+    }
+
+    footer p.contact-info {
+      color: #888;
+    }
+
+    footer p.contact-info span {
+      color: #888;
+    }
+
+    footer a {
+      color: #1e90ff;
+      text-decoration: underline;
+    }
+
+    footer a:hover {
+      color: #0056b3;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      outline: none;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      margin: 0 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      .logo-img {
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-image"></div>
+
+  <header>
+    <img src="imagenes/logooriginale.png" alt="Quark Techie Logo" class="logo-img">
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Nuestro enfoque</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>QUARK <span>TECHIE</span><br>QUALITY FOR THE BEST</h1>
+    <p>Consultoría especializada en aseguramiento de calidad de software</p>
+    <em>Garantice el éxito de su software con nuestro equipo de expertos en garantía de calidad.</em>
+    <br>
+    <button class="btn">OBTENGA SU AUDITORÍA GRATUITA</button>
+  </section>
+
+  <footer>
+    <p class="legal">© 2025 Quark Techie. Todos los derechos reservados.</p>
+    <p class="contact-info">
+      <span>Email:</span> <a href="mailto:contact@quarktechie.com">contact@quarktechie.com</a> |
+      <span>Teléfono:</span> <a href="tel:+1234567890">+1 234 567 890</a>
+    </p>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com" target="_blank">
+        <img src="imagenes/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com" target="_blank">
+        <img src="imagenes/github.png" alt="GitHub">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
